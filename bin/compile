@@ -22,6 +22,8 @@ TOR_SIG_NAME=${TOR_SRC_NAME}.asc
 TOR_SRC_URL=${TOR_DIST_URL}${TOR_SRC_NAME}
 TOR_SRC_SIG_URL=${TOR_DIST_URL}${TOR_SIG_NAME}
 
+echo "Build dir: ${BUILD_DIR}"
+
 ################################################################################
 # Try use cache
 ################################################################################
@@ -114,6 +116,7 @@ EOF
 
 chmod a+x ${BUILD_DIR}/tor/bin/${RUN_COMMAND}
 
+echo "Tor address: ${HIDDEN_DOT_ONION}" | indent
 echo "Installed Tor successfully" | indent
 
 
